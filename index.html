@@ -1,0 +1,1187 @@
+
+<div id="yukti-portfolio" class="yukti-portfolio">
+
+  <!-- 2-SECOND INTRO -->
+  <div class="yp-splash" aria-label="Yukti portfolio intro">
+    <div class="yp-splash-name">YUKTI</div>
+    <div class="yp-splash-line"></div>
+    <div class="yp-splash-subtitle">CREATIVE · DIGITAL · STRATEGY</div>
+  </div>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+  .yukti-portfolio{
+    --bg:#f6f0e8;
+    --panel:#fffaf3;
+    --soft:#eee3d7;
+    --wine:#572d3a;
+    --wine2:#753f4c;
+    --gold:#ae8b55;
+    --goldlight:#d2b985;
+    --text:#30252a;
+    --muted:#766a69;
+    --border:rgba(87,45,58,.17);
+    background:var(--bg);
+    color:var(--text);
+    font:14px/1.8 'Manrope',sans-serif;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+  }
+
+  .yukti-portfolio *{box-sizing:border-box}
+  .yukti-portfolio img{max-width:100%}
+  .yukti-portfolio a{color:inherit;text-decoration:none}
+  .yukti-portfolio button{font-family:inherit}
+
+  /* INTRO SCREEN */
+  .yukti-portfolio .yp-splash{
+    position:fixed;
+    inset:0;
+    z-index:999999;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#f6f0e8;
+    color:#572d3a;
+    opacity:1;
+    visibility:visible;
+    transition:opacity .55s ease,visibility .55s ease;
+  }
+
+  .yukti-portfolio .yp-splash.yp-splash-hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+
+  .yukti-portfolio .yp-splash-name{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-weight:600;
+    font-size:clamp(76px,15vw,150px);
+    line-height:1;
+    letter-spacing:.24em;
+    padding-left:.24em;
+    animation:yp-name-appear .9s ease both;
+  }
+
+  .yukti-portfolio .yp-splash-line{
+    width:100px;
+    height:1px;
+    background:#ae8b55;
+    margin:25px 0 15px;
+    animation:yp-line-appear .9s ease both;
+  }
+
+  .yukti-portfolio .yp-splash-subtitle{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#766a69;
+    text-align:center;
+    animation:yp-name-appear 1.1s ease both;
+  }
+
+  @keyframes yp-name-appear{
+    from{opacity:0;transform:translateY(14px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  @keyframes yp-line-appear{
+    from{width:0;opacity:0}
+    to{width:100px;opacity:1}
+  }
+
+  .yukti-portfolio .yp-container{
+    width:min(1160px,90%);
+    margin:0 auto;
+  }
+
+  .yukti-portfolio .yp-section{
+    padding:88px 0;
+    scroll-margin-top:30px;
+  }
+
+  .yukti-portfolio .yp-eyebrow{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:800;
+    margin:0 0 15px;
+  }
+
+  .yukti-portfolio .yp-heading,
+  .yukti-portfolio .yp-hero h1{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-weight:500;
+    line-height:1.1;
+    letter-spacing:-1px;
+  }
+
+  .yukti-portfolio .yp-heading{
+    font-size:clamp(38px,5vw,58px);
+    margin:0 0 18px;
+  }
+
+  .yukti-portfolio .yp-heading em{
+    color:var(--wine);
+    font-weight:400;
+  }
+
+  .yukti-portfolio .yp-subtitle{
+    color:var(--muted);
+    max-width:650px;
+    font-size:13px;
+  }
+
+  .yukti-portfolio .yp-center{text-align:center}
+  .yukti-portfolio .yp-center .yp-subtitle{margin:0 auto}
+
+  .yukti-portfolio .yp-btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    background:var(--wine);
+    color:#fffaf3;
+    border:1px solid var(--wine);
+    padding:13px 22px;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:.25s;
+  }
+
+  .yukti-portfolio .yp-btn:hover{
+    background:transparent;
+    color:var(--wine);
+    transform:translateY(-2px);
+  }
+
+  .yukti-portfolio .yp-btn-outline{
+    background:transparent;
+    color:var(--wine);
+  }
+
+  .yukti-portfolio .yp-btn-outline:hover{
+    background:var(--wine);
+    color:white;
+  }
+
+  /* NAVIGATION */
+  .yukti-portfolio .yp-topbar{
+    border-bottom:1px solid var(--border);
+    background:var(--bg);
+    position:relative;
+    z-index:10;
+  }
+
+  .yukti-portfolio .yp-nav{
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+  }
+
+  .yukti-portfolio .yp-brand{
+    display:inline-block;
+    color:var(--wine);
+    font:600 49px/.9 'Cormorant Garamond',Georgia,serif;
+    letter-spacing:8px;
+    white-space:nowrap;
+  }
+
+  .yukti-portfolio .yp-brand small{
+    display:block;
+    font:700 8px/1.5 'Manrope',sans-serif;
+    color:var(--gold);
+    letter-spacing:2.5px;
+    margin-top:13px;
+  }
+
+  .yukti-portfolio .yp-navlinks{
+    display:flex;
+    align-items:center;
+    gap:20px;
+  }
+
+  .yukti-portfolio .yp-navlinks a{
+    font-size:10px;
+    color:var(--text);
+  }
+
+  .yukti-portfolio .yp-navlinks a:hover{color:var(--gold)}
+
+  .yukti-portfolio .yp-menu{
+    display:none;
+    background:none;
+    border:1px solid var(--border);
+    padding:8px 12px;
+    color:var(--wine);
+    cursor:pointer;
+  }
+
+  /* HERO */
+  .yukti-portfolio .yp-hero{
+    background:
+      radial-gradient(ellipse at 83% 30%,#e7d5c4,transparent 48%),
+      var(--bg);
+  }
+
+  .yukti-portfolio .yp-hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:45px;
+    align-items:center;
+    padding:85px 0;
+  }
+
+  .yukti-portfolio .yp-hero h1{
+    font-size:clamp(70px,9vw,112px);
+    letter-spacing:-3px;
+    margin:0 0 18px;
+    color:var(--wine);
+  }
+
+  .yukti-portfolio .yp-hero h1 span{
+    font-style:italic;
+    color:var(--gold);
+  }
+
+  .yukti-portfolio .yp-hero h2{
+    font-size:clamp(17px,2vw,22px);
+    font-weight:500;
+    line-height:1.5;
+    margin:0 0 15px;
+  }
+
+  .yukti-portfolio .yp-hero p{
+    max-width:490px;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  .yukti-portfolio .yp-hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+  }
+
+  .yukti-portfolio .yp-hero-note{
+    font-size:9px!important;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold)!important;
+    margin-top:28px;
+  }
+
+  /* ABSTRACT VISUAL - NO PERSONAL PHOTO */
+  .yukti-portfolio .yp-visual{
+    position:relative;
+    min-height:410px;
+    display:grid;
+    place-items:center;
+  }
+
+  .yukti-portfolio .yp-orbit{
+    position:absolute;
+    width:min(370px,100%);
+    aspect-ratio:1;
+    border:1px solid #ae8b5570;
+    border-radius:50%;
+  }
+
+  .yukti-portfolio .yp-orbit:before,
+  .yukti-portfolio .yp-orbit:after{
+    content:"";
+    position:absolute;
+    inset:25px;
+    border:1px solid #ae8b5545;
+    border-radius:50%;
+  }
+
+  .yukti-portfolio .yp-orbit:after{inset:57px}
+
+  .yukti-portfolio .yp-core{
+    width:145px;
+    height:145px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    background:var(--wine);
+    color:#f6e7ce;
+    border:1px solid var(--gold);
+    font:25px/1.1 'Cormorant Garamond',serif;
+    box-shadow:0 20px 50px #572d3a25;
+  }
+
+  .yukti-portfolio .yp-float{
+    position:absolute;
+    background:#fffaf3;
+    border:1px solid var(--border);
+    padding:13px 15px;
+    box-shadow:0 10px 30px #572d3a0d;
+    min-width:150px;
+  }
+
+  .yukti-portfolio .yp-float strong{
+    display:block;
+    font-size:10px;
+  }
+
+  .yukti-portfolio .yp-float span{
+    font-size:9px;
+    color:var(--muted);
+  }
+
+  .yukti-portfolio .yp-float i{
+    color:var(--gold);
+    font-style:normal;
+    margin-right:5px;
+  }
+
+  .yukti-portfolio .yp-float-one{top:7%;left:0}
+  .yukti-portfolio .yp-float-two{top:28%;right:0}
+  .yukti-portfolio .yp-float-three{bottom:8%;left:3%}
+  .yukti-portfolio .yp-float-four{bottom:2%;right:0}
+
+  /* ABOUT */
+  .yukti-portfolio .yp-card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    transition:transform .25s,border-color .25s;
+  }
+
+  .yukti-portfolio .yp-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--gold);
+  }
+
+  .yukti-portfolio .yp-about-grid{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:55px;
+    align-items:start;
+  }
+
+  .yukti-portfolio .yp-about-mark{
+    min-height:260px;
+    padding:28px;
+    background:linear-gradient(145deg,#753f4c,#3f2430);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    color:#f6e7ce;
+  }
+
+  .yukti-portfolio .yp-big-y{
+    font:120px/1 'Cormorant Garamond',serif;
+    color:#d2b985;
+  }
+
+  .yukti-portfolio .yp-about-mark span{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+  }
+
+  .yukti-portfolio .yp-about-copy p{
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  .yukti-portfolio .yp-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:20px;
+  }
+
+  .yukti-portfolio .yp-tag{
+    display:inline-block;
+    border:1px solid var(--border);
+    padding:7px 12px;
+    font-size:10px;
+    color:var(--wine);
+  }
+
+  .yukti-portfolio .yp-soft-bg{background:#efe6dc}
+
+  /* TOOL LOGOS */
+  .yukti-portfolio .yp-tools{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:14px;
+    margin-top:38px;
+  }
+
+  .yukti-portfolio .yp-tool{
+    min-height:145px;
+    padding:18px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:13px;
+  }
+
+  .yukti-portfolio .yp-tool img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    flex-shrink:0;
+  }
+
+  .yukti-portfolio .yp-tool span{
+    font-size:11px;
+    color:var(--text);
+    line-height:1.5;
+  }
+
+  /* SKILLS */
+  .yukti-portfolio .yp-skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:15px;
+    margin-top:35px;
+  }
+
+  .yukti-portfolio .yp-skill{padding:23px}
+  .yukti-portfolio .yp-skill-icon{font-size:25px;color:var(--gold)}
+
+  .yukti-portfolio .yp-skill h3,
+  .yukti-portfolio .yp-project h3,
+  .yukti-portfolio .yp-service h3{
+    font:500 24px/1.2 'Cormorant Garamond',Georgia,serif;
+  }
+
+  .yukti-portfolio .yp-skill h3{margin:12px 0 7px}
+
+  .yukti-portfolio .yp-skill p,
+  .yukti-portfolio .yp-project p,
+  .yukti-portfolio .yp-service p{
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  .yukti-portfolio .yp-skill a{
+    font-size:10px;
+    color:var(--wine);
+    display:inline-block;
+    margin-top:8px;
+  }
+
+  /* PROJECT CARDS */
+  .yukti-portfolio .yp-projects{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+    margin-top:38px;
+  }
+
+  .yukti-portfolio .yp-project{
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    min-width:0;
+  }
+
+  .yukti-portfolio .yp-project-image{
+    display:block;
+    aspect-ratio:1.55;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#572d3a,#d2b985);
+  }
+
+  .yukti-portfolio .yp-project-image img{
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .4s;
+  }
+
+  .yukti-portfolio .yp-project:hover .yp-project-image img{
+    transform:scale(1.05);
+  }
+
+  .yukti-portfolio .yp-project-body{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+
+  .yukti-portfolio .yp-project-category{
+    font-size:9px;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  .yukti-portfolio .yp-project h3{margin:9px 0 6px}
+  .yukti-portfolio .yp-project p{margin:0 0 17px}
+
+  .yukti-portfolio .yp-project-link{
+    font-size:10px;
+    color:var(--wine)!important;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-top:auto;
+  }
+
+  .yukti-portfolio .yp-project-link:hover{text-decoration:underline}
+
+  .yukti-portfolio .yp-disclaimer{
+    font-size:10px;
+    color:var(--muted);
+    margin-top:20px;
+  }
+
+  /* SERVICES */
+  .yukti-portfolio .yp-services{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+    margin-top:35px;
+  }
+
+  .yukti-portfolio .yp-service{
+    display:flex;
+    gap:17px;
+    padding:22px;
+    align-items:flex-start;
+  }
+
+  .yukti-portfolio .yp-service-num{
+    font:28px 'Cormorant Garamond',serif;
+    color:var(--gold);
+  }
+
+  .yukti-portfolio .yp-service h3{margin:0 0 6px}
+  .yukti-portfolio .yp-service p{margin:0}
+
+  /* CONTACT */
+  .yukti-portfolio .yp-cta{
+    padding:60px 25px;
+    text-align:center;
+    border:1px solid var(--border);
+    background:linear-gradient(140deg,#fffaf3,#eadbce);
+  }
+
+  .yukti-portfolio .yp-cta p{
+    max-width:540px;
+    margin:0 auto 22px;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  .yukti-portfolio .yp-contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:24px;
+  }
+
+  .yukti-portfolio .yp-contact-links a{
+    border:1px solid var(--border);
+    padding:10px 15px;
+    font-size:11px;
+    color:var(--wine);
+  }
+
+  .yukti-portfolio .yp-contact-links a:hover{border-color:var(--gold)}
+
+  .yukti-portfolio .yp-footer{
+    background:#3f2430;
+    color:#e8dacf;
+    padding:25px 0;
+    font-size:9px;
+    letter-spacing:1px;
+  }
+
+  .yukti-portfolio .yp-footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+  }
+
+  .yukti-portfolio .yp-footer strong{
+    font:600 29px 'Cormorant Garamond',serif;
+    color:#e3c895;
+    letter-spacing:5px;
+  }
+
+  .yukti-portfolio .yp-reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .6s,transform .6s;
+  }
+
+  .yukti-portfolio .yp-reveal.yp-visible{
+    opacity:1;
+    transform:none;
+  }
+
+  @media(max-width:900px){
+    .yukti-portfolio .yp-navlinks{gap:11px}
+    .yukti-portfolio .yp-navlinks a{font-size:9px}
+    .yukti-portfolio .yp-tools{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .yukti-portfolio .yp-projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .yukti-portfolio .yp-hero-grid{gap:20px}
+  }
+
+  @media(max-width:650px){
+    .yukti-portfolio .yp-section{padding:62px 0}
+    .yukti-portfolio .yp-nav{
+      min-height:83px;
+      flex-wrap:wrap;
+      padding:13px 0;
+    }
+    .yukti-portfolio .yp-brand{font-size:38px;letter-spacing:6px}
+    .yukti-portfolio .yp-menu{display:block}
+    .yukti-portfolio .yp-navlinks{
+      display:none;
+      width:100%;
+      flex-direction:column;
+      align-items:stretch;
+      gap:0;
+      padding-bottom:10px;
+    }
+    .yukti-portfolio .yp-navlinks.yp-open{display:flex}
+    .yukti-portfolio .yp-navlinks a{
+      font-size:12px;
+      padding:10px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .yukti-portfolio .yp-hero-grid{
+      grid-template-columns:1fr;
+      padding:55px 0 30px;
+      gap:5px;
+    }
+    .yukti-portfolio .yp-hero h1{font-size:clamp(68px,16vw,90px)}
+    .yukti-portfolio .yp-visual{min-height:315px;margin-top:10px}
+    .yukti-portfolio .yp-orbit{width:270px}
+    .yukti-portfolio .yp-core{width:110px;height:110px;font-size:21px}
+    .yukti-portfolio .yp-float{min-width:115px;padding:9px}
+    .yukti-portfolio .yp-float-one{top:1%;left:0}
+    .yukti-portfolio .yp-float-two{top:23%;right:0}
+    .yukti-portfolio .yp-float-three{bottom:5%;left:0}
+    .yukti-portfolio .yp-float-four{bottom:0;right:0}
+    .yukti-portfolio .yp-about-grid{grid-template-columns:1fr;gap:25px}
+    .yukti-portfolio .yp-about-mark{min-height:170px}
+    .yukti-portfolio .yp-big-y{font-size:85px}
+    .yukti-portfolio .yp-tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .yukti-portfolio .yp-tool{min-height:120px}
+    .yukti-portfolio .yp-skills-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .yukti-portfolio .yp-skill{padding:15px}
+    .yukti-portfolio .yp-skill h3{font-size:21px}
+    .yukti-portfolio .yp-projects,
+    .yukti-portfolio .yp-services{grid-template-columns:1fr}
+    .yukti-portfolio .yp-project-image{aspect-ratio:1.6}
+    .yukti-portfolio .yp-cta{padding:40px 17px}
+    .yukti-portfolio .yp-footer-inner{flex-direction:column;text-align:center}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .yukti-portfolio *{animation:none!important;transition:none!important}
+    .yukti-portfolio .yp-reveal{opacity:1;transform:none}
+  }
+  </style>
+
+  <!-- HEADER -->
+  <header class="yp-topbar">
+    <div class="yp-container yp-nav">
+      <a class="yp-brand" href="#yp-home">YUKTI
+        <small>CREATIVE · DIGITAL · STRATEGY</small>
+      </a>
+      <button class="yp-menu" type="button" aria-expanded="false" aria-label="Toggle navigation">☰ Menu</button>
+      <nav class="yp-navlinks" aria-label="Main navigation">
+        <a href="#yp-home">Home</a>
+        <a href="#yp-about">About</a>
+        <a href="#yp-tools">Tools</a>
+        <a href="#yp-skills">Skills</a>
+        <a href="#yp-projects">Projects</a>
+        <a href="#yp-services">Services</a>
+        <a href="#yp-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="yp-hero" id="yp-home">
+    <div class="yp-container yp-hero-grid">
+      <div class="yp-reveal">
+        <p class="yp-eyebrow">Welcome to my creative space</p>
+        <h1>Hi, I'm<br><span>Yukti.</span></h1>
+        <h2>Exploring Digital Marketing, Creativity &amp; Digital Experiences.</h2>
+        <p>I enjoy bringing ideas to life through thoughtful marketing, engaging visuals, AI-powered content and well-designed websites. This is where my learning meets hands-on creativity.</p>
+        <div class="yp-hero-actions">
+          <a class="yp-btn" href="#yp-projects">Explore My Work ↗</a>
+          <a class="yp-btn yp-btn-outline" href="#yp-contact">Let's Connect</a>
+        </div>
+        <p class="yp-hero-note">Curiosity in strategy. Creativity in execution.</p>
+      </div>
+
+      <div class="yp-visual yp-reveal">
+        <div class="yp-orbit"></div>
+        <div class="yp-core">Ideas<br>into<br>experiences</div>
+        <div class="yp-float yp-float-one"><strong><i>✳</i> Creative Studio</strong><span>Visuals · Stories · Concepts</span></div>
+        <div class="yp-float yp-float-two"><strong><i>↗</i> Digital Strategy</strong><span>Audience · Content · Ads</span></div>
+        <div class="yp-float yp-float-three"><strong><i>◈</i> Web Experiences</strong><span>Design with purpose</span></div>
+        <div class="yp-float yp-float-four"><strong><i>✦</i> AI Creativity</strong><span>Imagine · Create · Refine</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="yp-section" id="yp-about">
+    <div class="yp-container yp-about-grid">
+      <div class="yp-about-mark yp-reveal">
+        <span>A little about my journey</span>
+        <div class="yp-big-y">Y.</div>
+        <span>Learning through making</span>
+      </div>
+      <div class="yp-about-copy yp-reveal">
+        <p class="yp-eyebrow">01 / About me</p>
+        <h2 class="yp-heading">Creative curiosity.<br><em>Practical learning.</em></h2>
+        <p>I'm Yukti, a digital marketing learner and creative enthusiast interested in the intersection of marketing, design and technology.</p>
+        <p>Through practice projects, I explore how creative visuals, engaging videos, websites and advertising ideas can help businesses communicate clearly and connect with their audiences.</p>
+        <p>I'm continually developing my skills, experimenting with new tools and building practical experience. This portfolio brings together selected projects and learning experiments from that journey.</p>
+        <div class="yp-tags">
+          <span class="yp-tag">Creative Content</span>
+          <span class="yp-tag">Digital Marketing</span>
+          <span class="yp-tag">Website Design</span>
+          <span class="yp-tag">AI Creativity</span>
+          <span class="yp-tag">Advertising</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS WITH LOGOS -->
+  <section class="yp-section yp-soft-bg" id="yp-tools">
+    <div class="yp-container">
+      <div class="yp-center yp-reveal">
+        <p class="yp-eyebrow">02 / My creative toolkit</p>
+        <h2 class="yp-heading">Tools I've been <em>learning.</em></h2>
+        <p class="yp-subtitle">Platforms I use or explore for research, content creation, website building, design and video editing.</p>
+      </div>
+
+      <div class="yp-tools">
+        <a class="yp-card yp-tool" href="https://chatgpt.com/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128" alt="ChatGPT logo" loading="lazy">
+          <span>ChatGPT</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://claude.ai/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128" alt="Claude logo" loading="lazy">
+          <span>Claude</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://drive.google.com/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=drive.google.com&sz=128" alt="Google Drive logo" loading="lazy">
+          <span>Google Drive</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://wordpress.org/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=wordpress.org&sz=128" alt="WordPress logo" loading="lazy">
+          <span>WordPress</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://gemini.google.com/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128" alt="Google Gemini logo" loading="lazy">
+          <span>Google Gemini</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://ads.google.com/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=ads.google.com&sz=128" alt="Google Ads logo" loading="lazy">
+          <span>Keyword Planner</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=labs.google&sz=128" alt="Google Flow logo" loading="lazy">
+          <span>Google Flow</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://www.capcut.com/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=capcut.com&sz=128" alt="CapCut logo" loading="lazy">
+          <span>CapCut</span>
+        </a>
+        <a class="yp-card yp-tool" href="https://www.canva.com/" target="_blank" rel="noopener">
+          <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" alt="Canva logo" loading="lazy">
+          <span>Canva</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="yp-section" id="yp-skills">
+    <div class="yp-container">
+      <div class="yp-reveal">
+        <p class="yp-eyebrow">03 / What I'm developing</p>
+        <h2 class="yp-heading">My areas of <em>focus.</em></h2>
+        <p class="yp-subtitle">A growing skill set across digital marketing, web experiences and creative production.</p>
+      </div>
+
+      <div class="yp-skills-grid">
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">✳</span>
+          <h3>Meta Ads</h3>
+          <p>Ad creative concepts, campaign structure, audience research, Meta Pixel setup and event tracking practice.</p>
+          <a href="https://docs.google.com/document/d/1JtBzNujTaUchD73gRo_zUQ6srwchAqlW_zSlqeptq0A/edit?usp=sharing" target="_blank" rel="noopener">View tracking notes ↗</a>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">↗</span>
+          <h3>Google Ads</h3>
+          <p>Ad copy, campaign formats, creative assets and advertising fundamentals.</p>
+          <a href="https://docs.google.com/document/d/1B7VXw-mqBZlUgCsVKTpUnzOMahIUDHi_uAOWIWo-mAE/edit?usp=sharing" target="_blank" rel="noopener">View project notes ↗</a>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">⌘</span>
+          <h3>Website Design</h3>
+          <p>WordPress, Elementor, responsive layouts and website concepts for businesses.</p>
+          <a href="https://yukti.save70.xyz/furniture/" target="_blank" rel="noopener">Explore website ↗</a>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">◈</span>
+          <h3>Landing Pages</h3>
+          <p>Page structure, calls to action, visual hierarchy and conversion-focused layouts.</p>
+          <a href="https://yukti.save70.xyz/salvatore/" target="_blank" rel="noopener">Explore landing page ↗</a>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">✧</span>
+          <h3>AI Images &amp; Video</h3>
+          <p>Prompt development, visual concepts, AI-generated creative assets and video experiments.</p>
+          <a href="https://docs.google.com/document/d/1rVjo8LYiYFyGqgkUQdcSEHYlQiB6JCyxtmJM2-rJWFs/edit?usp=sharing" target="_blank" rel="noopener">Explore image work ↗</a>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">▶</span>
+          <h3>Video Production</h3>
+          <p>Video shooting, editing, short-form creative and advertising video experiments.</p>
+          <a href="https://drive.google.com/file/d/1gRXQmJY6eUzqBR5ur5nYxq--a-o53mL8/view?usp=sharing" target="_blank" rel="noopener">View video work ↗</a>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">▤</span>
+          <h3>Shopify</h3>
+          <p>Learning ecommerce storefronts, product presentation and online store fundamentals.</p>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">✉</span>
+          <h3>Email Marketing</h3>
+          <p>Exploring email communication, campaign concepts and customer engagement.</p>
+        </article>
+        <article class="yp-card yp-skill yp-reveal">
+          <span class="yp-skill-icon">◎</span>
+          <h3>Content &amp; Strategy</h3>
+          <p>Social media content ideas, creative business strategies and presentation design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="yp-section yp-soft-bg" id="yp-projects">
+    <div class="yp-container">
+      <div class="yp-reveal">
+        <p class="yp-eyebrow">04 / Selected work</p>
+        <h2 class="yp-heading">Ideas made <em>visible.</em></h2>
+        <p class="yp-subtitle">Explore selected websites, landing pages, advertising creatives, AI content and presentations. Some items are learning or concept projects.</p>
+      </div>
+
+      <div class="yp-projects">
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://yukti.save70.xyz/imogen/" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=850&q=80" alt="Fashion storefront concept" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Website · Fashion</span>
+            <h3>IMOGEN Store</h3>
+            <p>A fashion storefront concept focused on product presentation, visual styling and shopping experience.</p>
+            <a class="yp-project-link" href="https://yukti.save70.xyz/imogen/" target="_blank" rel="noopener">View Website ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://yukti.save70.xyz/furniture/" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=850&q=80" alt="Elegant furniture interior" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Website · Furniture</span>
+            <h3>Furniture Website</h3>
+            <p>A luxury-minimalist website concept for showcasing furniture and encouraging enquiries.</p>
+            <a class="yp-project-link" href="https://yukti.save70.xyz/furniture/" target="_blank" rel="noopener">View Website ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://yukti.save70.xyz/salvatore/" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=850&q=80" alt="Beauty product concept" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Landing Page</span>
+            <h3>Salvatore</h3>
+            <p>A product-led landing page concept with visual storytelling and a clear page structure.</p>
+            <a class="yp-project-link" href="https://yukti.save70.xyz/salvatore/" target="_blank" rel="noopener">View Landing Page ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://yukti.save70.xyz/smm/" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=850&q=80" alt="Social media content workspace" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Digital Marketing</span>
+            <h3>Social Media Management</h3>
+            <p>A landing page presenting a social media management service concept for potential clients.</p>
+            <a class="yp-project-link" href="https://yukti.save70.xyz/smm/" target="_blank" rel="noopener">View Project ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://yukti.save70.xyz/vsl-landing-page/" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=850&q=80" alt="Modern workspace" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">VSL · Landing Page</span>
+            <h3>VSL Landing Page</h3>
+            <p>A video sales letter landing page project built around a clear message and focused next step.</p>
+            <a class="yp-project-link" href="https://yukti.save70.xyz/vsl-landing-page/" target="_blank" rel="noopener">View Project ↗</a>
+          </div>
+        </article>
+
+        <!-- IMAGE AD CREATIVES: UPDATED WITH YOUR EXACT LINK -->
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://docs.google.com/document/d/1xp8z247z4EMGCqDJXPxyW_kd8F8Fk2zFwJPXwSBPb81k/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=850&q=80" alt="Graphic design and advertising creative workspace" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Advertising · Design</span>
+            <h3>Image Ad Creatives</h3>
+            <p>A collection of image-based advertising concepts and visual creative experiments.</p>
+            <a class="yp-project-link" href="https://docs.google.com/document/d/1xp8z247z4EMGCqDJXPxyW_kd8F8Fk2zFwJPXwSBPb81k/edit?usp=sharing" target="_blank" rel="noopener">View Ad Concepts ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://docs.google.com/document/d/1rVjo8LYiYFyGqgkUQdcSEHYlQiB6JCyxtmJM2-rJWFs/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=850&q=80" alt="Creative art materials" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">AI · Visual Design</span>
+            <h3>AI Image Creation</h3>
+            <p>Visual experiments exploring prompts, art direction, atmosphere and image concepts.</p>
+            <a class="yp-project-link" href="https://docs.google.com/document/d/1rVjo8LYiYFyGqgkUQdcSEHYlQiB6JCyxtmJM2-rJWFs/edit?usp=sharing" target="_blank" rel="noopener">Explore Images ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://docs.google.com/document/d/1jwX8_qpLJiST2X5WTuNkjbXL5S9fl3gksTfCB6t6rUA/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=850&q=80" alt="Marketing creative concept" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">VSL · Image Ads</span>
+            <h3>Image-Based VSL Ads</h3>
+            <p>Ad concepts designed to create interest in a video sales letter and invite viewers to watch.</p>
+            <a class="yp-project-link" href="https://docs.google.com/document/d/1jwX8_qpLJiST2X5WTuNkjbXL5S9fl3gksTfCB6t6rUA/edit?usp=sharing" target="_blank" rel="noopener">View VSL Ads ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://docs.google.com/document/d/1SxmYvtBOrgiBsuE9xYI-OSOjrJd7yfAzXWDdbdv4AG4/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=850&q=80" alt="Video production equipment" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">VSL · Video Ads</span>
+            <h3>Video-Based VSL Ads</h3>
+            <p>Video advertising concepts with a watch-focused call to action and clear visual messaging.</p>
+            <a class="yp-project-link" href="https://docs.google.com/document/d/1SxmYvtBOrgiBsuE9xYI-OSOjrJd7yfAzXWDdbdv4AG4/edit?usp=sharing" target="_blank" rel="noopener">View Video Ad Work ↗</a>
+          </div>
+        </article>
+
+        <!-- AI VIDEO AD WITH IMAGE FALLBACK -->
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://drive.google.com/file/d/1n_wfEuQ4smTScY6_frT7rtaEUWljnwNf/view?usp=sharing" target="_blank" rel="noopener">
+            <img
+              src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=850&q=80"
+              alt="AI video advertising and production setup"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">AI · Video Creative</span>
+            <h3>AI Video Ad</h3>
+            <p>An AI-assisted video advertising experiment exploring creative direction and storytelling.</p>
+            <a class="yp-project-link" href="https://drive.google.com/file/d/1n_wfEuQ4smTScY6_frT7rtaEUWljnwNf/view?usp=sharing" target="_blank" rel="noopener">Watch Video ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://drive.google.com/file/d/1gRXQmJY6eUzqBR5ur5nYxq--a-o53mL8/view?usp=sharing" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=850&q=80" alt="Camera and production setup" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Production · Editing</span>
+            <h3>Video Shoots &amp; Edits</h3>
+            <p>Selected video production and editing work from my creative learning journey.</p>
+            <a class="yp-project-link" href="https://drive.google.com/file/d/1gRXQmJY6eUzqBR5ur5nYxq--a-o53mL8/view?usp=sharing" target="_blank" rel="noopener">View Video Work ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://docs.google.com/document/d/1B7VXw-mqBZlUgCsVKTpUnzOMahIUDHi_uAOWIWo-mAE/edit?usp=sharing" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=850&q=80" alt="Digital marketing analytics" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Google Ads · Research</span>
+            <h3>Google Ads Practice</h3>
+            <p>Campaign learning notes and advertising exercises covering formats and creative assets.</p>
+            <a class="yp-project-link" href="https://docs.google.com/document/d/1B7VXw-mqBZlUgCsVKTpUnzOMahIUDHi_uAOWIWo-mAE/edit?usp=sharing" target="_blank" rel="noopener">View Notes ↗</a>
+          </div>
+        </article>
+
+        <article class="yp-card yp-project yp-reveal">
+          <a class="yp-project-image" href="https://docs.google.com/presentation/d/1OHzE6Q5cCjuqB-fujtD0z8VLQH-DPp-g/edit?usp=sharing&ouid=111925912994040451053&rtpof=true&sd=true" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=850&q=80" alt="Presentation planning workspace" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=850&q=80'">
+          </a>
+          <div class="yp-project-body">
+            <span class="yp-project-category">Presentations</span>
+            <h3>Presentation Design</h3>
+            <p>Structured presentations created to communicate ideas and learning visually.</p>
+            <a class="yp-project-link" href="https://docs.google.com/presentation/d/1OHzE6Q5cCjuqB-fujtD0z8VLQH-DPp-g/edit?usp=sharing&ouid=111925912994040451053&rtpof=true&sd=true" target="_blank" rel="noopener">View Presentation ↗</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="yp-disclaimer">Project thumbnails are illustrative visuals. Open each project link to view the original work. External documents may require sharing permission.</p>
+
+      <div class="yp-tags">
+        <a class="yp-tag" href="https://docs.google.com/presentation/d/1ft3VzlhdNRULaBJPAqIxl73yjV6aQpkx/edit?usp=sharing&ouid=111925912994040451053&rtpof=true&sd=true" target="_blank" rel="noopener">Presentation 02 ↗</a>
+        <a class="yp-tag" href="https://docs.google.com/presentation/d/1ehLLBghyeNYUByXVMBKBxFJP8mLuOsCq/edit?usp=sharing&ouid=111925912994040451053&rtpof=true&sd=true" target="_blank" rel="noopener">Presentation 03 ↗</a>
+        <a class="yp-tag" href="https://docs.google.com/presentation/d/1Dxo3PfzrOOHJN35u2MjepdH57KhNwmyl/edit?usp=sharing&ouid=111925912994040451053&rtpof=true&sd=true" target="_blank" rel="noopener">Presentation 04 ↗</a>
+        <a class="yp-tag" href="https://drive.google.com/drive/folders/1rMB-tK62ogvFQDhNGMzdLEPwwiJjEb09?usp=sharing" target="_blank" rel="noopener">AI Video Collection ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="yp-section" id="yp-services">
+    <div class="yp-container">
+      <div class="yp-center yp-reveal">
+        <p class="yp-eyebrow">05 / Ways I can help</p>
+        <h2 class="yp-heading">Creative support for <em>growing brands.</em></h2>
+        <p class="yp-subtitle">Explore the areas where I am building practical skills and developing creative solutions.</p>
+      </div>
+
+      <div class="yp-services">
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">01</span><div><h3>Social Media Management</h3><p>Content ideas, creative planning and social media support for business communication.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">02</span><div><h3>Website &amp; Landing Pages</h3><p>WordPress and Elementor website concepts, landing page structure and clear calls to action.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">03</span><div><h3>Advertising Creative</h3><p>Image ads, video ad concepts, VSL creative and visual content experiments.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">04</span><div><h3>AI Content Creation</h3><p>AI-assisted image concepts, video experiments and creative prompt development.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">05</span><div><h3>Creative Business Strategies</h3><p>Creative brainstorming and content ideas tailored to a business's goals and audience.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">06</span><div><h3>Video &amp; Presentation Design</h3><p>Video shooting and editing practice, visual storytelling and presentation creation.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">07</span><div><h3>Meta &amp; Google Ads Support</h3><p>Creative assets, ad copy concepts and campaign-learning support based on project needs.</p></div></article>
+        <article class="yp-card yp-service yp-reveal"><span class="yp-service-num">08</span><div><h3>Ecommerce &amp; Email</h3><p>Exploring Shopify storefronts, ecommerce presentation and email marketing concepts.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="yp-section yp-soft-bg" id="yp-contact">
+    <div class="yp-container">
+      <div class="yp-cta yp-reveal">
+        <p class="yp-eyebrow">06 / Let's connect</p>
+        <h2 class="yp-heading">Have an idea?<br><em>Let's explore it.</em></h2>
+        <p>Have a website idea, a creative project or a business that needs fresh digital content? I'd love to hear what you're working on and discuss how we might collaborate.</p>
+
+        <!-- REPLACE EMAIL, WHATSAPP AND LINKEDIN PLACEHOLDERS -->
+        <a class="yp-btn" href="mailto:YOUR-EMAIL@example.com?subject=Portfolio%20Enquiry">Start a Conversation ↗</a>
+
+        <div class="yp-contact-links">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener">WhatsApp ↗</a>
+          <a href="mailto:YOUR-EMAIL@example.com">Email ↗</a>
+        </div>
+
+        <p style="font-size:10px;margin-top:20px">Replace the placeholder email, WhatsApp number and LinkedIn URL before publishing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="yp-footer">
+    <div class="yp-container yp-footer-inner">
+      <strong>YUKTI.</strong>
+      <span>IN PURSUIT OF THE UNIVERSE WITHIN.</span>
+      <span>© <span class="yp-year">2026</span> Yukti · Built with curiosity.</span>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var root=document.getElementById('yukti-portfolio');
+    if(!root)return;
+
+    /* Show YUKTI for 2 seconds, then reveal the portfolio */
+    var splash=root.querySelector('.yp-splash');
+    if(splash){
+      window.setTimeout(function(){
+        splash.classList.add('yp-splash-hide');
+        window.setTimeout(function(){
+          if(splash.parentNode)splash.parentNode.removeChild(splash);
+        },650);
+      },2000);
+    }
+
+    /* Mobile navigation */
+    var menu=root.querySelector('.yp-menu');
+    var nav=root.querySelector('.yp-navlinks');
+
+    if(menu&&nav){
+      menu.addEventListener('click',function(){
+        var opened=nav.classList.toggle('yp-open');
+        menu.setAttribute('aria-expanded',String(opened));
+        menu.textContent=opened?'✕ Close':'☰ Menu';
+      });
+
+      nav.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click',function(){
+          nav.classList.remove('yp-open');
+          menu.setAttribute('aria-expanded','false');
+          menu.textContent='☰ Menu';
+        });
+      });
+    }
+
+    /* Dynamic copyright year */
+    root.querySelectorAll('.yp-year').forEach(function(el){
+      el.textContent=new Date().getFullYear();
+    });
+
+    /* Scroll reveal */
+    var items=root.querySelectorAll('.yp-reveal');
+
+    if('IntersectionObserver' in window){
+      var observer=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('yp-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.08});
+
+      items.forEach(function(item){observer.observe(item);});
+    }else{
+      items.forEach(function(item){item.classList.add('yp-visible');});
+    }
+  })();
+  </script>
+</div>
